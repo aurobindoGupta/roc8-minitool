@@ -29,7 +29,7 @@ const Quizz = () => {
     const data = `Question:${questions[queId].que}Answer:${ansValue}.`;
     setNextBtn(false);
 
-    await fetch("http://localhost:3001/", {
+    fetch("https://concerned-blue-tortoise.cyclic.app", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,9 @@ const Quizz = () => {
   return (
     <>
       <div>
-      <h1><Timer/></h1>
+        <h1>
+          <Timer />
+        </h1>
         <div>{Object.values(questions[queId])}</div>
         <textarea
           placeholder={ansValue.length > 0 ? null : "Answer here"}
