@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Timer from "./Timer";
 
 const Quizz = () => {
   const [queId, setQueId] = useState(0);
@@ -52,6 +53,7 @@ const Quizz = () => {
   return (
     <>
       <div>
+      <h1><Timer/></h1>
         <div>{Object.values(questions[queId])}</div>
         <textarea
           placeholder={ansValue.length > 0 ? null : "Answer here"}
